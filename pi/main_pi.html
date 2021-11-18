@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>com.boxcast.stream-manager</title>
+    <link rel="stylesheet" href="sdpi.css" />
+    <script src="main_pi.js"></script>
+  </head>
+
+  <body onload="updateSettings();updateGlobal();">
+    <div class="sdpi-wrapper hidden">
+      <div class="sdpi-item" id="apiProviderContainer">
+        <div class="sdpi-item-label">Provider</div>
+        <select
+          class="sdpi-item-value select"
+          id="provider"
+          onchange="updateGlobal()"
+        >
+          <option value="scheduleBroadcast">Schedule Broadcast</option>
+          <option value="updateBroadcast">Update Broadcast</option>
+        </select>
+      </div>
+      <div class="sdpi-heading">Request Parameters</div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Name</div>
+        <input
+          class="sdpi-item-value"
+          id="apiKey"
+          value=""
+          onchange="updateGlobal()"
+          placeholder="Enter the desired name of the Broadcast"
+          required
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Stream Source</div>
+        <input
+          class="sdpi-item-value"
+          id="cityName"
+          value=""
+          onchange="updateSettings()"
+          placeholder="Enter the stream source"
+          required
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">boxcaster id</div>
+        <input
+          class="sdpi-item-value"
+          id="apiKey"
+          value=""
+          onchange="updateGlobal()"
+          placeholder="Enter the desired name of the Broadcast"
+          required
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">audio source</div>
+        <input
+          class="sdpi-item-value"
+          id="cityName"
+          value=""
+          onchange="updateSettings()"
+          placeholder="Enter the stream source"
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Starts At</div>
+        <input
+          class="sdpi-item-value"
+          id="apiKey"
+          value=""
+          onchange="updateGlobal()"
+          placeholder="Enter the desired name of the Broadcast"
+          required
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Stops At</div>
+        <input
+          class="sdpi-item-value"
+          id="cityName"
+          value=""
+          onchange="updateSettings()"
+          placeholder="Enter the stream source"
+          required
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Is Private</div>
+        <input
+          class="sdpi-item-value"
+          id="apiKey"
+          value=""
+          onchange="updateGlobal()"
+          placeholder="Enter the desired name of the Broadcast"
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Is Ticketed</div>
+        <input
+          class="sdpi-item-value"
+          id="cityName"
+          value=""
+          onchange="updateSettings()"
+          placeholder="Enter the stream source"
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Ticket Price</div>
+        <input
+          class="sdpi-item-value"
+          id="apiKey"
+          value=""
+          onchange="updateGlobal()"
+          placeholder="Enter the desired name of the Broadcast"
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Free Variant</div>
+        <input
+          class="sdpi-item-value"
+          id="cityName"
+          value=""
+          onchange="updateSettings()"
+          placeholder="Enter the stream source"
+          
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Description</div>
+        <input
+          class="sdpi-item-value"
+          id="apiKey"
+          value=""
+          onchange="updateGlobal()"
+          placeholder="Enter the desired name of the Broadcast"
+          
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">In Channel Id's</div>
+        <input
+          class="sdpi-item-value"
+          id="cityName"
+          value=""
+          onchange="updateSettings()"
+          placeholder="Enter the stream source"
+          
+        />
+      </div>
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Target Video Resolution</div>
+        <input
+          class="sdpi-item-value"
+          id="cityName"
+          value=""
+          onchange="updateSettings()"
+          placeholder="Enter the stream source"
+        />
+      </div>
+      <div class="sdpi-item">
+        <button class="sdpi-item-value" onclick="openPage(getProviderUrl())">
+          Get my API key
+        </button>
+        <button
+          class="sdpi-item-value"
+          onclick="openPage('github.com/JaouherK/streamDeck-weatherPlugin/issues/new?assignees=JaouherK&labels=bug&template=bug_report.md&title=Bug+report')"
+        >
+          Report bug
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
