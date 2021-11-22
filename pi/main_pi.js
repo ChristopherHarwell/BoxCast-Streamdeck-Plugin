@@ -40,11 +40,28 @@ function connectElgatoStreamDeckSocket(
     const jsonObj = JSON.parse(evt.data);
     if (jsonObj.event === "didReceiveSettings") {
       const payload = jsonObj.payload.settings;
-      initiateElement("broadcastName", payload.broadcastName);
+      initiateElement("broadcastId", payload.broadcastId);
+      initiateElement("broadcastPreview", payload.broadcastPreview);
+      initiateElement("channelId", payload.channelId);
+      initiateElement("broadcastPoster", payload.broadcastPoster);
+      initiateElement("boxcasterId", payload.boxcasterId);
+      initiateElement("boxcasterName", payload.boxcasterName);
+      initiateElement("audioSource", payload.audioSource);
+      initiateElement("startsAt", payload.startsAt);
+      initiateElement("stopsAt", payload.stopsAt);
+      initiateElement("timeframe", payload.timeframe);
+      initiateElement("isPrivate", payload.isPrivate);
+      initiateElement("isTicketed", payload.streamSource);
+      initiateElement("streamSource", payload.isTicketed);
+      initiateElement("ticketPrice", payload.ticketPrice);
       initiateElement("streamSource", payload.streamSource);
-      initiateElement("boxc", payload.displayCity, 0);
-      initiateElement("unit", payload.unit, "celsius");
-      initiateElement("roundDegree", payload.roundDegree, "true");
+      initiateElement("freeVariant", payload.freeVariant);
+      initiateElement("viewerUrl", payload.viewerUrl);
+      initiateElement("totalViewCount", payload.totalViewCount);
+      initiateElement("totalMinutesViewed", payload.totalMinutesViewed);
+      initiateElement("totalActiveViewerCount", payload.totalActiveViewerCount);
+      initiateElement("inChannelIds", payload.inChannelIds);
+      initiateElement("staticPlaylistUrl", payload.staticPlaylistUrl);
     }
     if (jsonObj.event === "didReceiveGlobalSettings") {
       const payload = jsonObj.payload.settings;
