@@ -132,7 +132,7 @@ function openPage(site) {
     websocket.send(JSON.stringify(json));
   }
 }
-
+// TODO: Change this to use the BoxCast auth urls
 function getProviderUrl() {
   const provider = document.getElementById("provider").value || "weatherApi";
   let url;
